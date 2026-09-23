@@ -1,0 +1,74 @@
+{
+ "batch": "backfill 6.3 batch 5 (heparanase-inhibition mechanism cluster)",
+ "date": "2026-08-13",
+ "note": "「機制」欄無可排序的量，§3.25 排序檢查不適用。改用另一形狀：同一機制在不同藥物列反覆出現。§5.5 十個藥中八個掛上「抑制 heparanase」。",
+ "cluster_finding": {
+  "shape": "§5.5 十個治療策略中，八個的機制欄含「抑制 heparanase」",
+  "result": "verified 1 / partial 5 / unsupported 2",
+  "common_structure_of_partials": "機制鏈前段為標準藥理、後段接到 heparanase 時斷掉。Fenofibrate（PPAR-α→NF-κB 成立，→heparanase 查無）、Sulforaphane（Nrf2→ROS 成立，→heparanase 查無）、DOAC（糖萼保護成立，下游標的為 PI3K-Akt 而非 heparanase/MMPs）。",
+  "interpretation": "不是八個藥都真的抑制 heparanase，而是本檔核心敘事是 heparanase，每個治療策略都被接到這個共同終點上。",
+  "two_strongest": "§5.5 第 1 列稱 SGLT2i 對 heparanase 表達抑制最強；第 2 列稱非抗凝修飾肝素為目前最強 heparanase 抑制劑。兩個軸（轉錄表達 vs 酵素活性 IC50 3 nM），兩個最強，表格未做區分。§3.20 的表內版本。"
+ },
+ "searches": [
+  {
+   "query": "non-anticoagulant heparin roneparstat sulodexide heparanase inhibition IC50 potency comparison",
+   "for": [
+    "6.3-noncoag-heparin-inhibitor",
+    "6.3-noncoag-heparin-10-100x-sulodexide",
+    "6.3-sulodexide-hs-supplement-heparanase"
+   ],
+   "hits": [
+    {
+     "id": "PMID:26762172",
+     "title": "Kinetic analysis and molecular modeling of the inhibition mechanism of roneparstat (SST0001) on human heparanase (Glycobiology 2016)",
+     "key": "**Roneparstat IC50 ≈ 3 nM**，劑量抑制曲線的 Hill 係數顯示高濃度時有兩分子抑制劑參與結合。文獻稱其為迄今最強效的 heparanase 抑制劑之一，個位數奈莫耳等級。"
+    },
+    {
+     "id": "no-id-frontimmunol-2026",
+     "title": "Non-anticoagulant heparins: glycan-mediated immune modulation（Front Immunol 2026）",
+     "key": "**文獻自己的比法**：Roneparstat IC50 約 3 nM，與未分餾肝素（IC50 約 10-50 nM）相當或更佳。拿同類化合物比，非跨劑型比。另載 SAR：2-O 與 6-O 硫酸化、N-乙醯化 <50%、glycol-split 殘基為強抑制的關鍵決定因素。"
+    },
+    {
+     "id": "no-id-iscience-2019",
+     "title": "Targeting Heparanase in Cancer: Inhibition（iScience 綜述）",
+     "key": "**Sulodexide IC50 = 5 μg/mL**（Abaterusso & Gambaro 2006；Masola et al. 2014）。組成 80% LMWH＋20% DS，肝素成分 MW 7000 Da、低硫酸化度。**抑制能力完全來自其肝素成分**（Masola 2012）。M402 IC50 亦為 5 μg/mL。"
+    },
+    {
+     "id": "no-id-pmc7142274",
+     "title": "Non-Anticoagulant Heparins as Heparanase Inhibitors（綜述）",
+     "key": "100NA-ROH IC50 = 3 nM；biotin 共軛物 IC50 同為奈莫耳級；M402（MW 5.5-6.0 kDa）IC50 = 5 μg/mL，Phase 2 因中期無效性分析中止。"
+    }
+   ]
+  },
+  {
+   "query": "SGLT2 inhibitor empagliflozin GLP-1 heparanase expression downregulation endothelial evidence",
+   "for": [
+    "6.3-sglt2-strongest-heparanase-suppression",
+    "6.3-glp1-endothelial-pericyte-heparanase-mmp9",
+    "6.3-fenofibrate-ppara-nfkb",
+    "6.3-sulforaphane-nrf2-heparanase",
+    "6.3-doac-thrombin-heparanase"
+   ],
+   "hits": [
+    {
+     "id": "no-hit",
+     "title": "（heparanase 零命中）",
+     "key": "**回傳為豐富的 SGLT2i／GLP-1 內皮文獻但無一提及 heparanase**：empagliflozin 抑制 MCP-1/CCL2 與 endothelin-1 表達（近端腎小管細胞）、逆轉高糖誘導的內皮老化與 SGLT1/2 上調、AMPK/KLF4 粒線體動態、ROS 累積抑制與 VEGFR-2 恢復、dapagliflozin 經下調 CTSB 抑制 NF-κB/NLRP3 焦亡；GLP-1RA 降低白血球黏附、抑制發炎細胞浸潤、防止 eNOS 解偶聯。依 queries.md §8.18，「主題正確但對象全錯」為零命中的可靠訊號。〔注意〕本結論來自單一檢索式，§7 抽取前應以不同措辭再驗。"
+    }
+   ]
+  },
+  {
+   "query": "（沿用 6.3 第三批基準）",
+   "for": [
+    "6.3-doac-thrombin-heparanase"
+   ],
+   "hits": [
+    {
+     "id": "PMID:39496251",
+     "title": "Rivaroxaban 保護氧化壓力誘導的內皮糖萼損傷",
+     "key": "機制為 IQGAP1 自細胞膜轉位至核周＋PAR1-PAR2/PI3K-Akt，終點為抑制 syndecan-1 脫落。PAR1 確為凝血酶受體，故「與凝血酶訊號相關」大方向不誤，但下游被記載的是 PI3K-Akt 存活途徑而非 heparanase／MMPs。以 ~ 標記，不對位維度為下游分子標的。"
+    }
+   ]
+  }
+ ]
+}
